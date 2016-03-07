@@ -87,7 +87,7 @@ nav li a:hover {
 }
 
 .feed-item h2 img,
-.appearance-right h2 img {
+.product-details h2 img {
     width: 2em;
     height: 2em;
     margin-right: .5em;
@@ -117,18 +117,18 @@ nav li a:hover {
     font-size: 21px;
 }
 
-.appearance-left {
+.appearance-outfit {
     width: 400px;
     height: 600px;
     margin-right: 2em;
     position: relative;
 }
 
-.appearance-left img {
+.appearance-outfit img {
     width: 100%;
 }
 
-.appearance-left .product-indicator {
+.appearance-outfit .product-indicator {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -137,7 +137,7 @@ nav li a:hover {
     border-radius: 50%;
 }
 
-.appearance-left .product-indicator.product-indicator-active {
+.appearance-outfit .product-indicator.product-indicator-active {
     background-color: #b4da55;
 }
 
