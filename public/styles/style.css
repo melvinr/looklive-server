@@ -11,16 +11,22 @@ body {
 nav {
     background-color: #252525;
     padding: .5em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-nav img {
+.logo {
     height: 30px;
+    max-width: 20%;
     display: block;
 }
 
 nav ul {
     list-style: none;
     margin: 0 auto;
+    width: 80%;
+    text-align: right;
 }
 
 nav li {
@@ -39,7 +45,6 @@ nav li a img {
     height: 1em;
     position: relative;
     margin-right: .3em;
-    top: 6px;
 }
 
 nav li a:hover {
@@ -56,6 +61,7 @@ body .header-img {
     max-height: 56vw;
     overflow: hidden;
 }
+
 
 /*
 body .header-img img {
@@ -78,30 +84,30 @@ body .feed-item img {
     max-width: 100%;
 }
 
-body .appearance-right, body .appearance-left {
+body .appearance-right,
+body .appearance-left {
     float: left;
 }
 
-body .feed-item h2 img, body .appearance-right h2 img {
+body .feed-item h2 img,
+body .appearance-right h2 img {
     width: 2em;
     height: 2em;
     margin-right: .5em;
     border-radius: 50%;
 }
 
-body .feed-item h2, body .appearance h2 {
+body .feed-item h2,
+body .appearance h2 {
     font-size: 16px;
-
     display: -webkit-flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
     margin-bottom: .5em;
 }
 
@@ -166,23 +172,22 @@ body .appearance-products h1 {
     border-bottom: 1px solid #ddd;
 }
 
-body .actual, body .similar {
+body .actual,
+body .similar {
     display: -webkit-flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
 
-body .actual .image, body .similar .image {
+body .actual .image,
+body .similar .image {
     width: 200px;
-
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-
     margin-right: 1em;
 }
 
@@ -190,24 +195,28 @@ body .similar .image {
     width: 150px;
 }
 
-body .actual .image h1, body .similar .image h1 {
+body .actual .image h1,
+body .similar .image h1 {
     margin: .5em 0;
     color: #333;
     font-size: 16px;
     border-bottom: none;
 }
 
-body .actual .image img, body .similar .image img {
+body .actual .image img,
+body .similar .image img {
     width: 100%;
 }
 
-body .actual .info h1, body .similar .info h1 {
+body .actual .info h1,
+body .similar .info h1 {
     font-size: 21px;
     margin: 1.5em 0 .5em 0;
     border-bottom: none;
 }
 
-body .actual .info h2, body .similar .info h2 {
+body .actual .info h2,
+body .similar .info h2 {
     font-size: 16px;
     margin: 1em 0;
 }
