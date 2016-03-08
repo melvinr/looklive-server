@@ -203,6 +203,7 @@ nav li a:hover {
 }
 
 /*icons*/
+/*credits to Matthias Dolstra for helping with gulp and sprites*/
 .icn-home {
 	background: url("/icons/icns-8a02e888.svg") 50% -20% no-repeat;
 }
