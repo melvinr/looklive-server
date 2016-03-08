@@ -14,5 +14,9 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
     "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-svg-sprite": "^1.2.19"
   }
 }
