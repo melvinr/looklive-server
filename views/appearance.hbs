@@ -1,4 +1,4 @@
-<article class="appearance" data-id="{{ item.id }}">
+<section class="appearance" data-id="{{ item.id }}">
     <section class="appearance-outfit">
         <img src="{{ item.image.url }}">
         {{#each item.product_occurrences}}
@@ -14,7 +14,7 @@
             <div class="appearance-products-inner">
                 {{#each products}}
                     <section class="product" data-uuid="{{id}}">
-                        <section class="actual">
+                        <div class="actual">
                             <div class="image">
                                 <h1>Actual</h1>
                                 <img src="{{image.url}}">
@@ -23,9 +23,9 @@
                                 <h1>{{ name }}</h1>
                                 <h2>{{ brand.name }}</h2>
                             </div>
-                        </section>
+                        </div>
                         {{#each similars}}
-                            <section class="similar">
+                            <div class="similar">
                                 <div class="image">
                                     <h1>{{ similar_type }}</h1>
                                     <img src="{{image.url}}">
@@ -34,11 +34,11 @@
                                     <h1>{{ name }}</h1>
                                     <h2>{{ brand.name }}</h2>
                                 </div>
-                            </section>
+                            </div>
                         {{/each}}
                     </section>
                 {{/each}}
             </div>
         </section>
     </section>
-</article>
+</section>
