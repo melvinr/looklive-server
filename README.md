@@ -46,34 +46,34 @@ The API returns JSON (for now).
 
 #Performance Tweaks
 ##Initial state
-[Initial State](readme-images/1-html/before.png)
+![Initial State](readme-images/1-html/before.png)
 
 ##Semantic HTML & Deleted excessive HTML
 ###Before
-[Before](readme-images/1-html/before.png)
+![Before](readme-images/1-html/before.png)
 ###After
-[After](readme-images/1-html/after.png)
+![After](readme-images/1-html/after.png)
 
 ##Optimized header image and changed from PNG to JPG
 ###Before
-[Before](readme-images/2-header-image/before.png)
+![Before](readme-images/2-header-image/before.png)
 ###After
-[After](readme-images/2-header-image/after.png)
+![After](readme-images/2-header-image/after.png)
 
 ##Optimized CSS
 ###Before
-[Before](readme-images/3-optimized-css/before.png)
+![Before](readme-images/3-optimized-css/before.png)
 ###After
-[After](readme-images/3-optimized-css/after.png)
+![After](readme-images/3-optimized-css/after.png)
 
 ##Changed PNG icons to SVG Spritesheet
 ###Before
-[Before](readme-images/4-svg-spritesheet/before.png)
+![Before](readme-images/4-svg-spritesheet/before.png)
 ###After
-[After](readme-images/4-svg-spritesheet/after.png)
+![After](readme-images/4-svg-spritesheet/after.png)
 
 ##Deleted jQuery
 ###Before
-[Before](readme-images/5-no-jquery/before.png)
+![Before](readme-images/5-no-jquery/before.png)
 ###After
-[After](readme-images/5-no-jquery/after.png)
+![After](readme-images/5-no-jquery/after.png)
