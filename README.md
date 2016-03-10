@@ -56,7 +56,7 @@ The API returns JSON (for now).
 
 ##Optimized header image and changed from PNG to JPG
 ###Before
-![Before](readme-images/2-header-image/before.png)
+![Before](readme-images/1-html/after.png)
 ###After
 ![After](readme-images/2-header-image/after.png)
 
