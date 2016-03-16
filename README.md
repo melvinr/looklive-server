@@ -49,30 +49,35 @@ The API returns JSON (for now).
 ![Initial State](readme-images/1-html/before.png)
 
 ##Semantic HTML & Deleted excessive HTML
+The difference was bigger than I thought it would be. Apparently using HTML can have a considerable effect on your website's performance.
 ###Before
 ![Before](readme-images/1-html/before.png)
 ###After
 ![After](readme-images/1-html/after.png)
 
 ##Optimized header image and changed from PNG to JPG
+This was a huge performance boost for the website. The loading time dropped more than 3(!) seconds. This has made me realize that it's really important for webdevelopers to keep the size of their images in check.
 ###Before
 ![Before](readme-images/1-html/after.png)
 ###After
 ![After](readme-images/2-header-image/after.png)
 
 ##Optimized CSS
+Optimizing CSS had a smaller impact on the page's load time than I previously thought it would have. Still it reduced the loading time by almost 100ms.
 ###Before
 ![Before](readme-images/3-optimized-css/before.png)
 ###After
 ![After](readme-images/3-optimized-css/after.png)
 
 ##Changed PNG icons to SVG Spritesheet
+Changing the PNG icons to an SVG spritesheet barely had any impact on the site's loading time.
 ###Before
 ![Before](readme-images/4-svg-spritesheet/before.png)
 ###After
 ![After](readme-images/4-svg-spritesheet/after.png)
 
 ##Deleted jQuery
+Deleting jQuery had significant influence on the page's load time. This dropped by 780ms. Although I have to say that I expected the drop to be a lot bigger, since there is a lot of discussion about how much impact jQuery can have on a website's performance.
 ###Before
 ![Before](readme-images/5-no-jquery/before.png)
 ###After
