@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ll.launcher = (function () {
     var init = function () {
         ll.routes.init();
+        ll.serviceWorker.init();
     };
 
     return {
