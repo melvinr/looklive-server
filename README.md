@@ -86,14 +86,14 @@ Deleting jQuery had significant influence on the page's load time. This dropped 
 ##Optimized header image again
 Since the header image was still too big, I decided to optimize it some more. I managed to drop the file size from 800kb to around 150 kb. The result was quite significant, reducing the load time by 1.2 seconds.
 ###Before
-![Before](readme-images/6-header-image-scnd/before.png)
+![Before](readme-images/6-header-image-scnd/Before.png)
 ###After
-![After](readme-images/6-header-image-scnd/after.png)
+![After](readme-images/6-header-image-scnd/After.png)
 
 ##Implemented Service Worker
 By implementing a service worker you can make your application work offline by saving its content as cache. This was a huge boost for the load time of the website, which was reduced drastically.
 ###Before
-![Before](readme-images/6-header-image-scnd/after.png)
+![Before](readme-images/6-header-image-scnd/After.png)
 ###After
 ![After](readme-images/7-service-worker/after.png)
 
