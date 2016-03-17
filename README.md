@@ -44,7 +44,7 @@ product id.
 The API returns JSON (for now).
 
 
-#Performance Tweaks
+#1: Performance Tweaks
 ##Initial state
 ![Initial State](readme-images/1-html/before.png)
 
@@ -99,6 +99,54 @@ By implementing a service worker you can make your application work offline by s
 
 ##Conclusion
 After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to.
+
+#2: Progressive Web App
+##What are progessive web apps
+
+Progressive web applications are websites that use some of the latest web technologies, and create an experience as close to a native application as possible. They are websites that start out in a tab in your browser, but as you use the application more it will give you a popup, offering to be added to your homescreen. While it may sound as no more than a basic bookmark, in reality it is a lot more than that. The power of PWAs lies in the fact that, over time, you will start building a relationship with them. They will start acting as a native app and offer functionalities previously only available to those apps. To give examples, a PWA has the ability to send push notifications and work offline. As well as offering a fullscreen experience. All this without having to download it from an app store.
+
+###Characteristics
+According to Google, progressive web apps are:
+- **Progressive** - They work for every user, regardless of the browser.
+- **Responsive** - They fit on every screen.
+- **Connectivity independent** - Enhanced with service workers to work offline and with low quality network connections.
+- **App-like** - Feel like a native application.
+- **Fresh**	- They are always up-to-date, thanks to the service worker.
+- **Safe** - Served via HTTPS.
+- **Discoverable** - Are identifiable as "applications", allowing search engines to find them.
+- **Re-engageable** - Make re-engagement easy through features like push notifications.
+- **Installable** - Allow users to keep apps on the home screen, without needing an app store.
+- **Linkable** - Easily shareable via URL.
+
+According to TJ van Toll, at a high level, for a web app to be progessive, it must do three things:
+- Register a service worker, giving the application the ability to work offline and send push notifications etc.
+- Run on HTTPS, it has to be served in a safe environment, protecting the user from nasty, harming scripts being injected.
+- Create an *app manifest file*, in which you specify information about your app, its name would be a good start.
+
+For speed and functionality PWAs rely on the Application Shell Architecture and Service Workers. Think of it like this: service workers have the basic interface and design of the web application ready to be served at all times. This makes for the shell of the application. In Application Shell Architecture service workers first serve the shell, and then content is delivered through API requests. Note that these will often be cached by a service worker. This allows the application to show the user the content he last saw when visiting the site, while waiting on new content to be loaded. Which, according to Google, allows for a much quicker loading of websites, especially on mobile connections.
+
+###Advantages
+- Push notifications.
+- App-like experience at a much lower cost.
+- Fast loading times.
+- It's hosted on the web, saving the user precious storage space.
+
+###Disadvantages
+- Not available in app stores, so users will not be able to find your application there.
+- Not currently available on iOS. Android only.
+
+
+##Sources
+- http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps
+- http://stackoverflow.com/tags/progressive-web-apps/info
+- http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/
+- http://arc.applause.com/2015/11/30/application-shell-architecture/
+- https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/
+
+#3: Looklive Online
+The looklive application is online and can be seen at https://performance.mreijnoudt.com
+
+
 
 
 
