@@ -1,5 +1,8 @@
 var gulp = require('gulp'),
-    svgSprite = require('gulp-svg-sprite');
+    concat = require('gulp-concat'),
+    cssnano = require('gulp-cssnano'),
+    svgSprite = require('gulp-svg-sprite'),
+    uglify = require('gulp-uglify');
 
 var svgConfig = {
     dest: '.',
@@ -26,7 +29,21 @@ var svgConfig = {
 };
 
 gulp.task('icons', function () {
-    gulp.src('./public//icons/svg/*.svg')
+    gulp.src('./public/icons/svg/*.svg')
         .pipe(svgSprite(svgConfig))
         .pipe(gulp.dest('./public/icons/sprite/'));
 });
+
+gulp.task('style', function() {
+    gulp.src('./public/src/css/*.css')
+        .pipe(concat('style.min.css'))
+        .pipe(cssnano())
+        .pipe(gulp.dest('./public/dist/css/'))
+})
+
+gulp.task('script', function () {
+    gulp.src('./public/src/js/*.js')
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('./public/dist/js/'));
+})

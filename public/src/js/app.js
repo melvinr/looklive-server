@@ -49,13 +49,13 @@ ll.page = (function () {
         //pass the correct api url to the promise
        ll.get.data(url)
             //if this is done, respond by adding the response from the request a specific HTML element
-            .then(response => {
+            .then(function(response) {
                 var target = document.getElementById("target");
                 target.innerHTML = response;
            
             })
            //If there is an error, show this in the console
-           .catch(e => {
+           .catch(function(e) {
                 console.error(e);
             });
     };
@@ -64,11 +64,11 @@ ll.page = (function () {
         var url = 'api/appearance/' + uuid;
 
         ll.get.data(url)
-            .then(response => {
+            .then(function(response) {
                 var target = document.getElementById("target");
                 target.innerHTML = response;
                 product();
-            }).catch(e => {
+            }).catch(function(e) {
                 console.error(e);
             });
     };
@@ -115,7 +115,7 @@ ll.get = (function() {
 
     function data(url) {
         // return a new Promise object
-        return new Promise((resolve, reject) => {
+        return new Promise(function(resolve, reject) {
             var request = new XMLHttpRequest();
             //open a get request, pass it the correct url, and set async to true
             request.open('GET', url, true);

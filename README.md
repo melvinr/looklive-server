@@ -97,6 +97,19 @@ By implementing a service worker you can make your application work offline by s
 ###After
 ![After](readme-images/7-service-worker/after.png)
 
+##Minified and concatenated JavaScript and CSS files
+By using Gulp, you can create an automated process in which your JavaScript and CSS files get minimized and concatenated. This means that your js and css code gets ugly, but the files get smaller in size. Furthermore, concatenating merges multiple files into one, so you only have to make a call to one file. This can help give your website/application a performance boost.
+
+By doing this the application got a boost of around 320 ms. Which isn't a bad win, considering the minor changes we've made and the effort we put in.
+
+Before: 11.58s
+After: 11.26s
+
+###Before
+![Before](readme-images/7-minified-concat/before.png)
+###After
+![After](readme-images/7-minified-concat/after.png)
+
 ##Conclusion
 After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to.
 

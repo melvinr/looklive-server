@@ -99,7 +99,7 @@ nav li a:hover {
     margin-top: 0;
 }
 
-.avatar{
+.avatar {
     width: 2em;
     height: 2em;
     margin-right: .5em;
@@ -108,6 +108,7 @@ nav li a:hover {
 
 
 /*Detail page*/
+
 .appearance-outfit {
     width: 400px;
     height: 600px;
@@ -170,7 +171,7 @@ nav li a:hover {
     border-bottom: 1px solid #ddd;
 }
 
-.image{
+.image {
     width: 200px;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
@@ -182,7 +183,7 @@ nav li a:hover {
     width: 150px;
 }
 
-.image h1{
+.image h1 {
     margin: .5em 0;
     color: #333;
     font-size: 16px;
@@ -193,7 +194,7 @@ nav li a:hover {
     width: 100%;
 }
 
-.info h1{
+.info h1 {
     margin: 1.5em 0 .5em 0;
     border-bottom: none;
 }
@@ -203,40 +204,45 @@ nav li a:hover {
     margin: 1em 0;
 }
 
+
 /*icons*/
+
+
 /*credits to Matthias Dolstra for helping with gulp and sprites*/
+
+
 .icn-home {
-	background: url("/icons/icns-8a02e888.svg") 50% -20% no-repeat;
-	width: 25px;
-	height: 23.09px;
+    background: url("/src/icons/icns-8a02e888.svg") 50% -20% no-repeat;
+    width: 25px;
+    height: 23.09px;
 }
 
 .icn-latest {
-	background: url("/icons/icns-8a02e888.svg") 0 78% no-repeat;
-	width: 23.8px;
-	height: 25px;
+    background: url("/src/icons/icns-8a02e888.svg") 0 78% no-repeat;
+    width: 23.8px;
+    height: 25px;
 }
 
 .icn-people {
-	background: url("/icons/icns-8a02e888.svg") 100% -17% no-repeat;
-	width: 25px;
-	height: 23.33px;
+    background: url("/src/icons/icns-8a02e888.svg") 100% -17% no-repeat;
+    width: 25px;
+    height: 23.33px;
 }
 
 .icn-shows {
-	background: url("/icons/icns-8a02e888.svg") 100% 68% no-repeat;
-	width: 25px;
-	height: 22.48px;
+    background: url("/src/icons/icns-8a02e888.svg") 100% 68% no-repeat;
+    width: 25px;
+    height: 22.48px;
 }
 
 .icn-music {
-	background: url("/icons/icns-8a02e888.svg") 47.6% 78% no-repeat;
-	width: 25px;
-	height: 25px;
+    background: url("/src/icons/icns-8a02e888.svg") 47.6% 78% no-repeat;
+    width: 25px;
+    height: 25px;
 }
 
 .icn-brands {
-	background: url("/icons/icns-8a02e888.svg") 0 -29% no-repeat;
-	width: 25px;
-	height: 25px;
+    background: url("/src/icons/icns-8a02e888.svg") 0 -29% no-repeat;
+    width: 25px;
+    height: 25px;
 }

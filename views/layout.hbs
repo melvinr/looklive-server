@@ -5,10 +5,10 @@
     
     <script> /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
         !function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
-        loadCSS('styles/style.css');
+        loadCSS('/dist/css/style.min.css');
     </script>
     
-    <noscript><link rel='stylesheet' href='/styles/style.css' /></noscript>
+    <noscript><link rel='stylesheet' href='/dist/css/style.min.css' /></noscript>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900,600,300,200,100' rel='stylesheet' type='text/css'>
     
 </head>
@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav>
-        <img src="/images/logo.png" class="logo">
+        <img src="/src/images/logo.png" class="logo">
             <ul class="nav-items">
                 <li><a href="/"><i class="icn-home"></i>Home</a></li>
                 <li><a href="https://looklive.com/discover/"><i class="icn-latest"></i>Latest</a></li>
@@ -26,14 +26,14 @@
                 <li><a href="https://looklive.com/brands/"><i class="icn-brands"></i>Brands</a></li>
             </ul>
         </nav>
-        <img src="/images/header.jpg" class="header-img">
+        <img src="/src/images/header.jpg" class="header-img">
     </header>
 
     <main>
         {{{body}}}
     </main>
     
-    <script src="/lib/routie.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/src/js/lib/routie.min.js"></script>
+    <script src="/dist/js/app.min.js"></script>
 </body>
 </html>
