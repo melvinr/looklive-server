@@ -106,9 +106,9 @@ Before: 11.58s
 After: 11.26s
 
 ###Before
-![Before](readme-images/7-minified-concat/before.png)
+![Before](readme-images/8-minified-concat/before.png)
 ###After
-![After](readme-images/7-minified-concat/after.png)
+![After](readme-images/8-minified-concat/after.png)
 
 ##Conclusion
 After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to.
