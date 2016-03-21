@@ -91,7 +91,7 @@ Since the header image was still too big, I decided to optimize it some more. I 
 ![After](readme-images/6-header-image-scnd/After.png)
 
 ##Implemented Service Worker
-By implementing a service worker you can make your application work offline by saving its content as cache. This was a huge boost for the load time of the website, which was reduced drastically.
+By implementing a service worker you can make your application work offline by saving its content as cache. This was a huge boost for the load time of the website, which was reduced drastically. The reason the load time shows this drop, is because the second time the application is loaded using cache. Since I cached almost all content (all the images for instance), the application can render these in no time.
 ###Before
 ![Before](readme-images/6-header-image-scnd/After.png)
 ###After
