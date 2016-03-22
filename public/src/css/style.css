@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v10/CcKI4k9un7TZVWzRVT-T873hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
 body {
     font: 14px Raleway, Helvetica, Arial, sans-serif;
     background-color: #f1f1f1;
@@ -6,6 +13,10 @@ body {
 
 body a {
     color: #00B7FF;
+}
+
+.fonts-loaded body{
+    font-family: Raleway;
 }
 
 i {
@@ -210,39 +221,38 @@ nav li a:hover {
 
 /*credits to Matthias Dolstra for helping with gulp and sprites*/
 
-
 .icn-home {
-    background: url("/src/icons/icns-8a02e888.svg") 50% -20% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 50% -20% no-repeat;
     width: 25px;
     height: 23.09px;
 }
 
 .icn-latest {
-    background: url("/src/icons/icns-8a02e888.svg") 0 78% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 0 78% no-repeat;
     width: 23.8px;
     height: 25px;
 }
 
 .icn-people {
-    background: url("/src/icons/icns-8a02e888.svg") 100% -17% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 100% -17% no-repeat;
     width: 25px;
     height: 23.33px;
 }
 
 .icn-shows {
-    background: url("/src/icons/icns-8a02e888.svg") 100% 68% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 100% 68% no-repeat;
     width: 25px;
     height: 22.48px;
 }
 
 .icn-music {
-    background: url("/src/icons/icns-8a02e888.svg") 47.6% 78% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 47.6% 78% no-repeat;
     width: 25px;
     height: 25px;
 }
 
 .icn-brands {
-    background: url("/src/icons/icns-8a02e888.svg") 0 -29% no-repeat;
+    background: url("/src/images/icons/icns-8a02e888.svg") 0 -29% no-repeat;
     width: 25px;
     height: 25px;
 }

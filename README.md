@@ -48,8 +48,14 @@ The API returns JSON (for now).
 ##Initial state
 ![Initial State](readme-images/1-html/before.png)
 
+Initial state: **15.57s**
+
 ##Semantic HTML & Deleted excessive HTML
 The difference was bigger than I thought it would be. Apparently using HTML can have a considerable effect on your website's performance.
+
+Before: **15.57s**
+After: **15.51s**
+
 ###Before
 ![Before](readme-images/1-html/before.png)
 ###After
@@ -57,6 +63,10 @@ The difference was bigger than I thought it would be. Apparently using HTML can 
 
 ##Optimized header image and changed from PNG to JPG
 This was a huge performance boost for the website. The loading time dropped more than 3(!) seconds. This has made me realize that it's really important for webdevelopers to keep the size of their images in check.
+
+Before: **15.51s**
+After: **12.31s**
+
 ###Before
 ![Before](readme-images/1-html/after.png)
 ###After
@@ -64,6 +74,10 @@ This was a huge performance boost for the website. The loading time dropped more
 
 ##Optimized CSS
 Optimizing CSS had a smaller impact on the page's load time than I previously thought it would have. Still it reduced the loading time by almost 100ms.
+
+Before: **12.31s**
+After: **12.22s**
+
 ###Before
 ![Before](readme-images/3-optimized-css/before.png)
 ###After
@@ -71,6 +85,10 @@ Optimizing CSS had a smaller impact on the page's load time than I previously th
 
 ##Changed PNG icons to SVG Spritesheet
 Changing the PNG icons to an SVG spritesheet barely had any impact on the site's loading time.
+
+Before: **12.22s**
+After: **12.19s**
+
 ###Before
 ![Before](readme-images/4-svg-spritesheet/before.png)
 ###After
@@ -78,6 +96,10 @@ Changing the PNG icons to an SVG spritesheet barely had any impact on the site's
 
 ##Deleted jQuery
 Deleting jQuery had significant influence on the page's load time. This dropped by 780ms. Although I have to say that I expected the drop to be a lot bigger, since there is a lot of discussion about how much impact jQuery can have on a website's performance.
+
+Before: **13.57s**
+After: **12.79s**
+
 ###Before
 ![Before](readme-images/5-no-jquery/before.png)
 ###After
@@ -85,6 +107,10 @@ Deleting jQuery had significant influence on the page's load time. This dropped 
 
 ##Optimized header image again
 Since the header image was still too big, I decided to optimize it some more. I managed to drop the file size from 800kb to around 150 kb. The result was quite significant, reducing the load time by 1.2 seconds.
+
+Before: **12.79s**
+After: **11.58s**
+
 ###Before
 ![Before](readme-images/6-header-image-scnd/Before.png)
 ###After
@@ -92,6 +118,10 @@ Since the header image was still too big, I decided to optimize it some more. I 
 
 ##Implemented Service Worker
 By implementing a service worker you can make your application work offline by saving its content as cache. This was a huge boost for the load time of the website, which was reduced drastically. The reason the load time shows this drop, is because the second time the application is loaded using cache. Since I cached almost all content (all the images for instance), the application can render these in no time.
+
+Before: **11.58s**
+After: **287ms**
+
 ###Before
 ![Before](readme-images/6-header-image-scnd/After.png)
 ###After
@@ -100,18 +130,45 @@ By implementing a service worker you can make your application work offline by s
 ##Minified and concatenated JavaScript and CSS files
 By using Gulp, you can create an automated process in which your JavaScript and CSS files get minimized and concatenated. This means that your js and css code gets ugly, but the files get smaller in size. Furthermore, concatenating merges multiple files into one, so you only have to make a call to one file. This can help give your website/application a performance boost.
 
-By doing this the application got a boost of around 320 ms. Which isn't a bad win, considering the minor changes we've made and the effort we put in.
+The boost I got wasn't as big as I expected it to be, nonetheless, all the pieces matter.
 
-Before: 11.58s
-After: 11.26s
+Before: **11.37**
+After: **11.29s**
 
 ###Before
 ![Before](readme-images/8-minified-concat/before.png)
 ###After
 ![After](readme-images/8-minified-concat/after.png)
 
+##Image optimization using Gulp
+Using Gulp you can create an automized process in which your images get optimized. This is a great way to relieve you from a lot of repetitive, manual and timeconsuming tasks. Since images take a lot of space and render time, it's important to optimize them. To make them a lot smaller in size, whilst still looking good.
+
+Because I already optimised the header image manually, I didn't expect too much of a boost to the load time. As was the case. The load time dropped by around 20 ms, but this number was extremely variable since the timeline didn't show the same timestamp on every reload.
+
+Before: **11.29s**
+After: **11.27s**
+
+###Before
+![Before](readme-images/9-image-optimization/before.png)
+###After
+![After](readme-images/9-image-optimization/after.png)
+
+##Webfont using Fontface Observer
+By using Fontface Observer you can make your custom font available after the initial loading of the website. The user will first get to see the fallback font in a Flash of Unstyled Text (FOUT). As soon as the font is loaded, it will add this to the page. Changing the font from the fallback to the custom font.
+
+I didn't expect a real boost to the page, since it's only one font that's being loaded. As expected, the results weren't too exciting. With a boost of around 10ms, this isn't much of a win. But what is great, is that when the page loads, the user gets to see unstyled text instead of no text at all. Enabling the user to read the content.
+
+Before: **11.29s**
+After: **11.28s**
+
+###Before
+![Before](readme-images/10-web-font/before.png)
+###After
+![After](readme-images/10-web-font/after.png)
+
+
 ##Conclusion
-After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to.
+After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to. By using a task manager like Gulp, you can automate a lot of tedious, repetitive tasks which can give your site a performance boost. This makes for a great way to save time, and boost your website.
 
 #2: Progressive Web App
 ##What are progessive web apps

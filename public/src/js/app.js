@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ll.launcher = (function () {
     var init = function () {
         ll.routes.init();
+        ll.fonts.init();
     };
 
     return {
@@ -47,15 +48,15 @@ ll.page = (function () {
     var home = function () {
         var url = '/api/feed';
         //pass the correct api url to the promise
-       ll.get.data(url)
+        ll.get.data(url)
             //if this is done, respond by adding the response from the request a specific HTML element
-            .then(function(response) {
+            .then(function (response) {
                 var target = document.getElementById("target");
                 target.innerHTML = response;
-           
+
             })
-           //If there is an error, show this in the console
-           .catch(function(e) {
+            //If there is an error, show this in the console
+            .catch(function (e) {
                 console.error(e);
             });
     };
@@ -64,11 +65,11 @@ ll.page = (function () {
         var url = 'api/appearance/' + uuid;
 
         ll.get.data(url)
-            .then(function(response) {
+            .then(function (response) {
                 var target = document.getElementById("target");
                 target.innerHTML = response;
                 product();
-            }).catch(function(e) {
+            }).catch(function (e) {
                 console.error(e);
             });
     };
@@ -79,7 +80,7 @@ ll.page = (function () {
             '.product-indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
         );
         var indicators = document.querySelectorAll('.product-indicator');
-        
+
         firstProduct.classList.add('product-active');
         firstIndicator.classList.add('product-indicator-active');
 
@@ -111,11 +112,11 @@ ll.page = (function () {
 
 })();
 
-ll.get = (function() {
+ll.get = (function () {
 
     function data(url) {
         // return a new Promise object
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             var request = new XMLHttpRequest();
             //open a get request, pass it the correct url, and set async to true
             request.open('GET', url, true);
@@ -139,4 +140,18 @@ ll.get = (function() {
         data: data
     }
 
+})();
+
+ll.fonts = (function () {
+    function init() {
+        var observer = new FontFaceObserver('Raleway');
+
+        observer.check().then(function () {
+            document.documentElement.className += " fonts-loaded";
+        });
+    };
+
+    return {
+        init: init
+    }
 })();
