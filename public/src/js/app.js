@@ -9,6 +9,7 @@ ll.launcher = (function () {
     var init = function () {
         ll.routes.init();
         ll.fonts.init();
+         ll.serviceWorker.init();
     };
 
     return {
