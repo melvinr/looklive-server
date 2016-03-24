@@ -44,7 +44,76 @@ product id.
 The API returns JSON (for now).
 
 
-#1: Performance Tweaks
+#1: Progressive Web App
+##What are progessive web apps?
+
+Progressive web applications are websites that use some of the latest web technologies, and create an experience as close to a native application as possible. They are websites that start out in a tab in your browser, but as you use the application more it will give you a popup, offering to be added to your homescreen. While it may sound as no more than a basic bookmark, in reality it is a lot more than that. The power of PWAs lies in the fact that, over time, you will start building a relationship with them. They will start acting as a native app and offer functionalities previously only available to those apps. To give examples, a PWA has the ability to send push notifications and work offline. As well as offering a fullscreen experience. All this without having to download it from an app store.
+
+###Characteristics
+According to Google, progressive web apps are:
+- **Progressive** - They work for every user, regardless of the browser.
+- **Responsive** - They fit on every screen.
+- **Connectivity independent** - Enhanced with service workers to work offline and with low quality network connections.
+- **App-like** - Feel like a native application.
+- **Fresh**	- They are always up-to-date, thanks to the service worker.
+- **Safe** - Served via HTTPS.
+- **Discoverable** - Are identifiable as "applications", allowing search engines to find them.
+- **Re-engageable** - Make re-engagement easy through features like push notifications.
+- **Installable** - Allow users to keep apps on the home screen, without needing an app store.
+- **Linkable** - Easily shareable via URL.
+
+According to TJ van Toll, at a high level, for a web app to be progessive, it must do three things:
+- Register a service worker, giving the application the ability to work offline and send push notifications etc.
+- Run on HTTPS, it has to be served in a safe environment, protecting the user from nasty, harming scripts being injected.
+- Create an *app manifest file*, in which you specify information about your app, its name would be a good start.
+
+For speed and functionality PWAs rely on the Application Shell Architecture and Service Workers. Think of it like this: service workers have the basic interface and design of the web application ready to be served at all times. This makes for the shell of the application. In Application Shell Architecture service workers first serve the shell, and then content is delivered through API requests. Note that these will often be cached by a service worker. This allows the application to show the user the content he last saw when visiting the site, while waiting on new content to be loaded. Which, according to Google, allows for a much quicker loading of websites, especially on mobile connections.
+
+###Advantages
+- Push notifications.
+- App-like experience at a much lower cost.
+- Fast loading times.
+- It's hosted on the web, saving the user precious storage space.
+
+###Disadvantages
+- Not available in app stores, so users will not be able to find your application there.
+- Not currently available on iOS. Android only.
+
+
+##Sources
+- http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps
+- http://stackoverflow.com/tags/progressive-web-apps/info
+- http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/
+- http://arc.applause.com/2015/11/30/application-shell-architecture/
+- https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/
+
+
+#2: Task Managers
+Task managers are a great way for task automation. Take file minifying or optimizing images for example. Instead of having to execute this task manually, a task manager can do this for you. Ultimately saving you time instead of having to perform repetitive tasks. Currently there are two popular task managers, Grunt and Gulp.
+
+##Grunt vs Gulp
+###Grunt
+Grunt is a very popular task manager used by a lot of developers and companies. It has a big community and offers a lot of available tasks. 
+
+The basic principle of Grunt is to allow us to easily run certain tasks. A task is a set of code and configuration files that have arleady been created for you. Getting new tasks means installing new plugins through NPM.
+
+###Gulp
+Gulp is an alternative to Grunt. It is newer and is regarded as being more flexible than Grunt. Just like Grunt, it works using NPM and the package.json file.
+
+###Difference
+One of the main differences between Gulp and Grunt is that Gulp uses streams instead of configurations. A stream is a set of functions, which a file will go through and will be modified in memory. Only at the end of the process the file will be written on the disk. Grunt works differently. As it will handle processes using intermediary files, which are disk I/O operations. Take for example compiling and minifying your SASS file. Grunt will compile it and write it to a temporary file, which is used by the autoprefixer, and then the final product is written to the final (destination) file.
+
+Gulp does this in-memory. This makes Gulp faster than Grunt.
+
+##Conclusion
+Both Grunt and Gulp are great tools that can help you save a lot of time and effort by automating certain tedious tasks. Personally I prefer Gulp over Grunt because of its cleaner API.
+
+#Sources:
+- https://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4#.xbq8zamd3
+- http://www.hongkiat.com/blog/gulp-vs-grunt/
+
+
+#Performance Tweaks
 ##Initial state
 ![Initial State](readme-images/1-html/before.png)
 
@@ -170,48 +239,9 @@ After: **11.28s**
 ##Conclusion
 After implementing some tweaks to reduce the load time, I came to the realization that a lot of responsibility belongs to us as developers. It's our job to make sure images are small and the correct type. We have to decide whether or not to implement jQuery, and we have total control over how we write our HTML and CSS. The decisions we make during the development of a website will have a big impact on the way a user sees a website, and the company it belongs to. By using a task manager like Gulp, you can automate a lot of tedious, repetitive tasks which can give your site a performance boost. This makes for a great way to save time, and boost your website.
 
-#2: Progressive Web App
-##What are progessive web apps
+##Advice
+After testing these performance tweaks, my advice would be to implement as many of them as possible. With this I mean, implement the ones that you think will give a decent to great boost to the performance. By implementing the above tweaks I went from a page that took **15.57s** to load on a 4G connection, to **11.27s** respectively. This is a great performance boost, and definitely worth the effort. One of the most useful tweaks for the LookLive page, would be to optimize as many images as possible. Since this is the website's main component it can save a lot of loading time.
 
-Progressive web applications are websites that use some of the latest web technologies, and create an experience as close to a native application as possible. They are websites that start out in a tab in your browser, but as you use the application more it will give you a popup, offering to be added to your homescreen. While it may sound as no more than a basic bookmark, in reality it is a lot more than that. The power of PWAs lies in the fact that, over time, you will start building a relationship with them. They will start acting as a native app and offer functionalities previously only available to those apps. To give examples, a PWA has the ability to send push notifications and work offline. As well as offering a fullscreen experience. All this without having to download it from an app store.
-
-###Characteristics
-According to Google, progressive web apps are:
-- **Progressive** - They work for every user, regardless of the browser.
-- **Responsive** - They fit on every screen.
-- **Connectivity independent** - Enhanced with service workers to work offline and with low quality network connections.
-- **App-like** - Feel like a native application.
-- **Fresh**	- They are always up-to-date, thanks to the service worker.
-- **Safe** - Served via HTTPS.
-- **Discoverable** - Are identifiable as "applications", allowing search engines to find them.
-- **Re-engageable** - Make re-engagement easy through features like push notifications.
-- **Installable** - Allow users to keep apps on the home screen, without needing an app store.
-- **Linkable** - Easily shareable via URL.
-
-According to TJ van Toll, at a high level, for a web app to be progessive, it must do three things:
-- Register a service worker, giving the application the ability to work offline and send push notifications etc.
-- Run on HTTPS, it has to be served in a safe environment, protecting the user from nasty, harming scripts being injected.
-- Create an *app manifest file*, in which you specify information about your app, its name would be a good start.
-
-For speed and functionality PWAs rely on the Application Shell Architecture and Service Workers. Think of it like this: service workers have the basic interface and design of the web application ready to be served at all times. This makes for the shell of the application. In Application Shell Architecture service workers first serve the shell, and then content is delivered through API requests. Note that these will often be cached by a service worker. This allows the application to show the user the content he last saw when visiting the site, while waiting on new content to be loaded. Which, according to Google, allows for a much quicker loading of websites, especially on mobile connections.
-
-###Advantages
-- Push notifications.
-- App-like experience at a much lower cost.
-- Fast loading times.
-- It's hosted on the web, saving the user precious storage space.
-
-###Disadvantages
-- Not available in app stores, so users will not be able to find your application there.
-- Not currently available on iOS. Android only.
-
-
-##Sources
-- http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps
-- http://stackoverflow.com/tags/progressive-web-apps/info
-- http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/
-- http://arc.applause.com/2015/11/30/application-shell-architecture/
-- https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/
 
 #3: Looklive Online
 The looklive application is online and can be seen at https://performance.mreijnoudt.com
