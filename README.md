@@ -103,7 +103,7 @@ Gulp is an alternative to Grunt. It is newer and is regarded as being more flexi
 ###Difference
 One of the main differences between Gulp and Grunt is that Gulp uses streams instead of configurations. A stream is a set of functions, which a file will go through and will be modified in memory. Only at the end of the process the file will be written on the disk. Grunt works differently. As it will handle processes using intermediary files, which are disk I/O operations. Take for example compiling and minifying your SASS file. Grunt will compile it and write it to a temporary file, which is used by the autoprefixer, and then the final product is written to the final (destination) file.
 
-Gulp does this in-memory. This makes Gulp faster than Grunt.
+Gulp does this in-memory. Meaning that it will performa the neccessary actions, and will only write the destination file when it's finished. This makes Gulp faster than Grunt.
 
 ##Conclusion
 Both Grunt and Gulp are great tools that can help you save a lot of time and effort by automating certain tedious tasks. Personally I prefer Gulp over Grunt because of its cleaner API.
